@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class CannonController : MonoBehaviour
@@ -16,9 +17,12 @@ public class CannonController : MonoBehaviour
     [SerializeField] private float minProjectileVelocity = 3f;
     [SerializeField] private float maxProjectileVelocity = 10f;
 
+    [SerializeField]
+    private CinemachineVirtualCamera cmCam;
+
     void Start()
     {
-        
+        // cmCam = gameObject.GetComponentInChildren<CinemachineVirtualCamera>();
     }
 
     private void OnEnable()
@@ -27,7 +31,11 @@ public class CannonController : MonoBehaviour
         {
             LoadProjectile();
         }
-        
+        else
+        {
+            UnloadProjectile();
+        }
+
         cannonSo.CannonFire += CannonFire;
     }
 
@@ -73,7 +81,8 @@ public class CannonController : MonoBehaviour
     public void LoadProjectile()
     {
         isLoaded = true;
-
+        //cmCam.enabled = true;
+        cmCam.Priority = 10;
         if (checkpoint)
         {
             makeCannonCheckpoint();           
@@ -84,6 +93,8 @@ public class CannonController : MonoBehaviour
     public void UnloadProjectile()
     {
         isLoaded = false;
+        cmCam.Priority = 2;
+        //cmCam.enabled = false;
     }
 
     public void makeCannonCheckpoint()

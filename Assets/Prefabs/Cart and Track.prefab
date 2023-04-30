@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4035288288760953698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cartSo: {fileID: 11400000, guid: 5ec63d2e483e44eb4bf6bf5f99b45450, type: 2}
   cart: {fileID: 4035288289051391896}
-  cartDistance: 28
+  cartDistanceInPx: 32
   cartRb: {fileID: 7442637268517523955}
   track: {fileID: 4035288288760953699}
 --- !u!114 &408664944479988716
