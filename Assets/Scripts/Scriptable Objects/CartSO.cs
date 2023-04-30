@@ -24,7 +24,6 @@ public class CartSO : ScriptableObject
 
     public void MouseInput(float x)
     {
-        Debug.Log(x);
         addPosition(x * cartSensitivity);
     }
     
