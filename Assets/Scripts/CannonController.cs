@@ -61,6 +61,7 @@ public class CannonController : MonoBehaviour
         var cannonFireVelocity = minProjectileVelocity + (maxProjectileVelocity - minProjectileVelocity) * cannonSo.GetPower();
         projectileInstance.velocity = barrel.transform.up * cannonFireVelocity;
         
+        cannonSo.SetPower(0.75f);
         UnloadProjectile();
     }
 

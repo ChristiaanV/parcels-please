@@ -34,6 +34,11 @@ public class CannonSO : ScriptableObject
         this.power = math.clamp(this.power + power, 0f, 1f);
     }
     
+    public void SetPower(float power)
+    {
+        this.power = math.clamp(power, 0f, 1f);
+    }
+    
     public float GetAngleInDegrees()
     {
         return angleInDegrees;

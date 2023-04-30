@@ -6,11 +6,14 @@ using UnityEngine.Serialization;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private CannonSO cannonSo;
+    [SerializeField] private CartSO cartSo;
     [SerializeField] private ResetManager resetManager;
+    
     
     void Update()
     {
         if (cannonSo != null) CannonInput();
+        if (cartSo != null) CartInput();
         if (resetManager != null) ResetInput();
     }
 
@@ -32,6 +35,12 @@ public class InputManager : MonoBehaviour
         {
             resetManager.ResetParcel();
         }
+    }
+
+    private void CartInput()
+    {
+        float _mouseX = Input.GetAxis("Mouse X");
+        cartSo.MouseInput(_mouseX);
     }
     
 }
