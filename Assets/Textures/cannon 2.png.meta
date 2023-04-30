@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7346c94ac7cd61b2da53c9a75aabaff2
+guid: 5f2f86b866dcac8a5b995e4081d7129a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,14 +45,14 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.71875, y: 0.46875}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 13, y: 15, z: 0, w: 7}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -117,54 +117,60 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cart_0
+      name: cannon 2_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 15
-        width: 19
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 0
+        width: 16
+        height: 13
+      alignment: 9
+      pivot: {x: 0.46875, y: 0.65384614}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 9.5, y: -4}
-        - {x: -9.5, y: -4}
-        - {x: -9.5, y: 5}
-        - {x: -7.5, y: 5}
-        - {x: -7.5, y: -2}
-        - {x: 7.5, y: -2}
-        - {x: 7.5, y: 5}
-        - {x: 9.5, y: 5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80fcc3d2771f718f8aa3cfaf8b21ebd5
-      internalID: 1880837959
+      spriteID: d981fd817cad98e8494292402698191b
+      internalID: -1746509336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cannon 2_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 19
+        height: 10
+      alignment: 9
+      pivot: {x: 0.4473684, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d347a615533c5f19b9e53bcd6b60451e
+      internalID: 162297805
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    physicsShape:
-    - - {x: -3, y: 0}
-      - {x: -3, y: 9}
-      - {x: -1, y: 9}
-      - {x: -1, y: 2}
-      - {x: 14, y: 2}
-      - {x: 14, y: 9}
-      - {x: 16, y: 9}
-      - {x: 16, y: 0}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cart_0: 1880837959
+      cannon 2_0: -1746509336
+      cannon 2_1: 162297805
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

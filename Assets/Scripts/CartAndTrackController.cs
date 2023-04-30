@@ -37,6 +37,6 @@ public class CartAndTrackController : MonoBehaviour
 
     private void UpdateTrackPosition()
     {
-        track.size = new Vector2((cartDistanceInPx + 36)/ 16 , 1);
+        track.size = new Vector2((cartDistanceInPx + 36)/ 16 , 0.333f);
     }
 }
