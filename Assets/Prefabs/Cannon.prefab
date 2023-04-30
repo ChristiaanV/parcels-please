@@ -52,6 +52,7 @@ MonoBehaviour:
   cannonSo: {fileID: 11400000, guid: f4402e1d0846b75289461f1d82c18cc5, type: 2}
   projectileSpawnLocation: {fileID: 7200721855246977814}
   projectile: {fileID: 8802130299946155434, guid: 7fc57cccf479a52c8be448b1a1e42285, type: 3}
+  maxProjectileVelocity: 10
 --- !u!1 &6377922783002891854
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7426289570394087784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 0}
+  m_LocalPosition: {x: 0, y: 0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

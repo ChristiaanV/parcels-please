@@ -11,7 +11,7 @@ public class CannonController : MonoBehaviour
     [SerializeField] private CannonSO cannonSo;
     
     [SerializeField] private Transform projectileSpawnLocation;
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private Rigidbody2D projectile;
     [SerializeField] private float maxProjectileVelocity = 10f;
 
     void Start()
@@ -50,8 +50,9 @@ public class CannonController : MonoBehaviour
     {
         if (!isLoaded) return;
 
-        var projectileInstance = Instantiate(projectile, projectileSpawnLocation);
-        
+        var projectileInstance = Instantiate(projectile, projectileSpawnLocation.transform.position, barrel.transform.rotation);
+        var cannonFireVelocity = cannonSo.GetPower() * maxProjectileVelocity;
+        projectileInstance.velocity = barrel.transform.up * cannonFireVelocity;
         
         isLoaded = false;
     }
