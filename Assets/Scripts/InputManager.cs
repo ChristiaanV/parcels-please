@@ -14,7 +14,13 @@ public class InputManager : MonoBehaviour
     private void CannonInput()
     {
         float _mouseX = Input.GetAxis("Mouse X");
-        float _mouseY = Input.GetAxis("Mouse Y");
+        float _mouseY = Input.GetAxis("Mouse ScrollWheel");
         cannonSo.MouseInput(new Vector2(_mouseX, _mouseY));
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            cannonSo.Fire();
+        }
     }
+    
 }

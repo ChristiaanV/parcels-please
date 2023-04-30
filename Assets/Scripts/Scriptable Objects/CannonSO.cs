@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Cannon", menuName = "Game/Cannon")]
 public class CannonSO : ScriptableObject
@@ -15,6 +16,9 @@ public class CannonSO : ScriptableObject
     [SerializeField]
     [Range(-90f, 90f)]
     public float angleInDegrees = 90f;
+    
+    public event UnityAction CannonFire = delegate {  };
+    
     void OnEnable()
     {
         
@@ -40,7 +44,7 @@ public class CannonSO : ScriptableObject
         this.angleInDegrees = math.clamp(this.angleInDegrees + angle, -90f, 90f);
     }
 
-    private Vector2 getIndicatorDirection()
+    private Vector2 GetIndicatorDirection()
     {
         var xDir = - Mathf.Sin(angleInDegrees * Mathf.Deg2Rad);
         var yDir = Mathf.Cos(angleInDegrees * Mathf.Deg2Rad);
@@ -51,12 +55,14 @@ public class CannonSO : ScriptableObject
     // TODO: Add player controller mouse sensitivity 
     public void MouseInput(Vector2 mouseInput)
     {
-        var indicatorDirection = getIndicatorDirection();
+        AddPower(mouseInput.y * powerSensitivity);
 
-        var powerIncrease = Vector2.Dot(mouseInput, indicatorDirection);
-        AddPower(powerIncrease * powerSensitivity);
-
-        var angleIncrease = Vector2.Dot(mouseInput, Vector2.Perpendicular(indicatorDirection));
-        AddAngleInDegrees(angleIncrease * angleSensitivity);
+        AddAngleInDegrees(mouseInput.x * -angleSensitivity);
     }
+
+    public void Fire()
+    {
+        CannonFire.Invoke();
+    }
+
 }
