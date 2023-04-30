@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private CannonSO cannonSo;
+    [SerializeField] private ResetManager resetManager;
     
     void Update()
     {
         if (cannonSo != null) CannonInput();
+        if (resetManager != null) ResetInput();
     }
 
     private void CannonInput()
@@ -20,6 +23,14 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             cannonSo.Fire();
+        }
+    }
+
+    private void ResetInput()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            resetManager.ResetParcel();
         }
     }
     
