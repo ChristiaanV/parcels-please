@@ -16,3 +16,4 @@ MonoBehaviour:
   angleSensitivity: 2.4
   power: 1
   angleInDegrees: 87.11998
+  _playerPrefsSo: {fileID: 11400000, guid: 5cc3962872a7935e5863734857a666f3, type: 2}

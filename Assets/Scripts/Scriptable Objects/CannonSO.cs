@@ -16,7 +16,7 @@ public class CannonSO : ScriptableObject
     [SerializeField]
     [Range(-90f, 90f)]
     public float angleInDegrees = 90f;
-    
+    [SerializeField] private PlayerPrefsSO _playerPrefsSo;
     public event UnityAction CannonFire = delegate {  };
     
     void OnEnable()
@@ -62,7 +62,7 @@ public class CannonSO : ScriptableObject
     {
         AddPower(mouseInput.y * powerSensitivity);
 
-        AddAngleInDegrees(mouseInput.x * -angleSensitivity);
+        AddAngleInDegrees(mouseInput.x * -angleSensitivity * _playerPrefsSo.GetMouseSensitivity());
     }
 
     public void Fire()

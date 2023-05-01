@@ -11,7 +11,9 @@ public class CartSO : ScriptableObject
     [Range(0, 1)] 
     private float cartPosition = 0f;
 
-
+    [SerializeField] private PlayerPrefsSO _playerPrefsSo;
+    
+    
     public void addPosition(float pos)
     {
         cartPosition = Mathf.Clamp(cartPosition + pos, 0f, 1f);
@@ -24,7 +26,7 @@ public class CartSO : ScriptableObject
 
     public void MouseInput(float x)
     {
-        addPosition(x * cartSensitivity);
+        addPosition(x * cartSensitivity * _playerPrefsSo.GetMouseSensitivity());
     }
     
 }

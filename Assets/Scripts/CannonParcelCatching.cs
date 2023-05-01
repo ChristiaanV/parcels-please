@@ -9,7 +9,6 @@ public class CannonParcelCatching : MonoBehaviour
     void Start()
     {
         _cannonController = gameObject.GetComponentInParent<CannonController>();
-        Debug.Log(_cannonController.name);
     }
 
     void Update()

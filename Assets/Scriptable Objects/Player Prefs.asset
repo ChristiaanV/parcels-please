@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e583e83580647f28a95ffdf43ded1b5, type: 3}
-  m_Name: Carts
+  m_Script: {fileID: 11500000, guid: 50d8bea13666f01f7b210261309357b7, type: 3}
+  m_Name: Player Prefs
   m_EditorClassIdentifier: 
-  cartSensitivity: 0.013333333
-  cartPosition: 0.9066652
-  _playerPrefsSo: {fileID: 11400000, guid: 5cc3962872a7935e5863734857a666f3, type: 2}
+  mouseSensitivity: 0
+  musicVolume: 0
+  sfxVolume: 0
