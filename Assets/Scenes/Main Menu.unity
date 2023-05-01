@@ -342,6 +342,9 @@ MonoBehaviour:
   BounceSFX:
   - {fileID: 8300000, guid: 74d02d4752010044ca9b8754895e8874, type: 3}
   - {fileID: 8300000, guid: a4a5081992aa8f44caa130f42bf840a5, type: 3}
+  - {fileID: 8300000, guid: 74d02d4752010044ca9b8754895e8874, type: 3}
+  - {fileID: 8300000, guid: 74d02d4752010044ca9b8754895e8874, type: 3}
+  - {fileID: 8300000, guid: 74d02d4752010044ca9b8754895e8874, type: 3}
   LowPitchRange: 0.75
   HighPitchRange: 1.05
 --- !u!4 &866060410
