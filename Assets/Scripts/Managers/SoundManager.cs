@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
 	public AudioSource MusicSource;
 	public AudioSource SingleSource;
 
+    public AudioClip MainMusic;
+
 	public AudioClip FireSFX;
 	public AudioClip LoadSFX;
 	public AudioClip FireGigaSFX;
@@ -65,5 +67,16 @@ public class SoundManager : MonoBehaviour
 		SingleSource.clip = clips[randomIndex];
 		SingleSource.Play();
 	}
+
+	public void SetMusicVolume(float volume)
+    {
+        MusicSource.volume = volume;
+    }
+
+	public void SetEffectVolume(float volume)
+    {
+        EffectsSource.volume = volume;
+        SingleSource.volume = volume;
+    }
 
 }
