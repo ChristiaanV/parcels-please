@@ -38,9 +38,20 @@ public class ResetManager : MonoBehaviour
 
         foreach (GameObject parcel in parcels)
         {
-            Destroy(parcel);
+            parcel.SetActive(false);
+            StartCoroutine(destroyShortly(parcel));
         }
     }
+
+    IEnumerator destroyShortly(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+    }
+
+
+
+
 
     private void ResetAllCannons()
     {

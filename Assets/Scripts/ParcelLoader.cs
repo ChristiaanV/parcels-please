@@ -41,8 +41,5 @@ public class ParcelLoader : MonoBehaviour
             CannonController cannonController = BarrelObj.GetComponentInParent<CannonController>();
             cannonController.LoadProjectile(); 
         }
-        
-
-            
     }
 }

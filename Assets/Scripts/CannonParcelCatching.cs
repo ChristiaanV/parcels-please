@@ -23,8 +23,15 @@ public class CannonParcelCatching : MonoBehaviour
         Debug.Log("Cannon Catcher: " + this.transform.parent.transform.parent.name);
         if (_cannonController.GetIsLoaded()) return;
 
-        Destroy(col.gameObject);
-        
+        col.gameObject.SetActive(false);
+        StartCoroutine(destroyShortly(col.gameObject));
+
         _cannonController.LoadProjectile();
+    }
+
+    IEnumerator destroyShortly(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }
