@@ -18,6 +18,12 @@ public class ParcelLoader : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("Parcel Collision Detected!");
+        SoundManager.Instance.RandomSoundEffect(SoundManager.Instance.BounceSFX);
+    }
+
     private void CartAndCannonTouchLoader()
     {
         Vector2 pos = new Vector2(transform.position.x, transform.position.y);

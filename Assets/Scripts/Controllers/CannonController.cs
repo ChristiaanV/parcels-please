@@ -68,6 +68,8 @@ public class CannonController : MonoBehaviour
     {
         if (!isLoaded) return;
 
+        SoundManager.Instance.Play(SoundManager.Instance.FireSFX);
+
         var projectileInstance = Instantiate(projectile, projectileSpawnLocation.transform.position, barrel.transform.rotation);
         var cannonFireVelocity = minProjectileVelocity + (maxProjectileVelocity - minProjectileVelocity) * cannonSo.GetPower();
         projectileInstance.velocity = barrel.transform.up * cannonFireVelocity;
@@ -85,6 +87,7 @@ public class CannonController : MonoBehaviour
 
     public void LoadProjectile()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.LoadSFX);
         isLoaded = true;
         //cmCam.enabled = true;
         cmCam.Priority = 10;
