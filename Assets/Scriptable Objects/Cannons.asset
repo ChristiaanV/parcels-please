@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb44c6156fced073092e0e694fe9d477, type: 3}
   m_Name: Cannons
   m_EditorClassIdentifier: 
-  powerSensitivity: 0.83
+  powerSensitivity: 0.4
   angleSensitivity: 2.4
-  power: 1
-  angleInDegrees: 87.11998
+  power: 0.75
+  angleInDegrees: 18.225065
   _playerPrefsSo: {fileID: 11400000, guid: 5cc3962872a7935e5863734857a666f3, type: 2}
