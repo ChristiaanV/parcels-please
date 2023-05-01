@@ -7,6 +7,7 @@ public class GigaCannonManager : MonoBehaviour
 {
     [SerializeField] private GameObject firePrompt;
     [SerializeField] private CinemachineVirtualCamera gigaCam;
+    [SerializeField] private ParticleSystem fireParticles;
 
     private bool ready = false;
     
@@ -21,7 +22,7 @@ public class GigaCannonManager : MonoBehaviour
         if (ready && Input.GetKeyDown(KeyCode.F))
         {
             firePrompt.SetActive(false);
-
+            fireParticles.Play(true);
             ready = false;
         }
     }
