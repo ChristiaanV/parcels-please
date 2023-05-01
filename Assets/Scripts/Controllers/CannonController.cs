@@ -22,6 +22,7 @@ public class CannonController : MonoBehaviour
 
     private CinemachineImpulseSource _recoilImpulse;
 
+    [SerializeField] private ParticleSystem _particleSystem;
     void Start()
     {
         _recoilImpulse = gameObject.GetComponent<CinemachineImpulseSource>();
@@ -78,6 +79,7 @@ public class CannonController : MonoBehaviour
         UnloadProjectile();
         
         _recoilImpulse.GenerateImpulse(4f);
+        _particleSystem.Play();
     }
 
     public bool GetIsLoaded()
