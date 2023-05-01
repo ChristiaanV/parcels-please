@@ -31,7 +31,7 @@ public class ResetManager : MonoBehaviour
         checkPointCannon.LoadProjectile();
     }
 
-    private void DestroyAllParcels()
+    public void DestroyAllParcels()
     {
         
         var parcels = GameObject.FindGameObjectsWithTag("Parcel");

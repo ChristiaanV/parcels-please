@@ -20,6 +20,7 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera cmCam;
 
+
     void Start()
     {
         // cmCam = gameObject.GetComponentInChildren<CinemachineVirtualCamera>();
@@ -87,6 +88,7 @@ public class CannonController : MonoBehaviour
         {
             makeCannonCheckpoint();           
         }
+        GameObject.FindObjectOfType<ResetManager>().DestroyAllParcels();
 
     }
 
