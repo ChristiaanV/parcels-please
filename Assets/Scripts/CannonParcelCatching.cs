@@ -18,6 +18,9 @@ public class CannonParcelCatching : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag != "Parcel") return;
+        
+        Debug.Log("Cannon Catcher: " + this.transform.parent.transform.parent.name);
         if (_cannonController.GetIsLoaded()) return;
 
         Destroy(col.gameObject);
