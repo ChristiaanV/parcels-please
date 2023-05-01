@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986701, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: isLoaded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986703, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: m_Name
@@ -94243,7 +94243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986701, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: isLoaded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986703, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: m_Name
