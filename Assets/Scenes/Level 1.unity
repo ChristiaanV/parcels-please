@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986701, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: isLoaded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986703, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: m_Name
@@ -50786,14 +50786,6 @@ Tilemap:
     m_Data: {fileID: -1407396434, guid: c2efab5277b7ed837aaa6d14d75e2011, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1982610170, guid: c2efab5277b7ed837aaa6d14d75e2011, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 5005
     m_Data:
@@ -51106,7 +51098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986701, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: isLoaded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6377922782648986703, guid: 7ed768c58b1586011b7148b2237d8017, type: 3}
       propertyPath: m_Name

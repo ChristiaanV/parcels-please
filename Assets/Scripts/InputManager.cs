@@ -5,6 +5,8 @@ using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
+    public bool InGameState = true;
+    
     [SerializeField] private CannonSO cannonSo;
     [SerializeField] private CartSO cartSo;
     [SerializeField] private ResetManager resetManager;
@@ -12,9 +14,12 @@ public class InputManager : MonoBehaviour
     
     void Update()
     {
-        if (cannonSo != null) CannonInput();
-        if (cartSo != null) CartInput();
-        if (resetManager != null) ResetInput();
+        if (InGameState)
+        {
+            if (cannonSo != null) CannonInput();
+            if (cartSo != null) CartInput();
+            if (resetManager != null) ResetInput();
+        }
     }
 
     private void CannonInput()
