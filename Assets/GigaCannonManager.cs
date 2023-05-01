@@ -36,6 +36,8 @@ public class GigaCannonManager : MonoBehaviour
         
         firePrompt.SetActive(true);
         gigaCam.Priority = 100;
+
+        SoundManager.Instance.Play(SoundManager.Instance.LoadGigaSFX);
         
         ready = true;
 
@@ -44,6 +46,7 @@ public class GigaCannonManager : MonoBehaviour
     private void FireGigaCannon()
     {
         firePrompt.SetActive(false);
+        SoundManager.Instance.Play(SoundManager.Instance.FireGigaSFX);
         fireParticles.Play(true);
         ready = false;
         _impulseSource.GenerateImpulse(4f);

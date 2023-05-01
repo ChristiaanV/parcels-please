@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour
 
 	public AudioClip FireSFX;
 	public AudioClip LoadSFX;
+	public AudioClip FireGigaSFX;
+	public AudioClip LoadGigaSFX;
 	public AudioClip[] BounceSFX;
 
 	// Random pitch adjustment range.

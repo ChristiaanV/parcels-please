@@ -336,6 +336,8 @@ MonoBehaviour:
   SingleSource: {fileID: 1637193586}
   FireSFX: {fileID: 8300000, guid: 51c08594f18d6e44f998ead5832680b7, type: 3}
   LoadSFX: {fileID: 8300000, guid: 1a1f998751d1f054c93bf6bb0a396c74, type: 3}
+  FireGigaSFX: {fileID: 8300000, guid: 3b299e832eb65d64ea8aadfb7b0f7eba, type: 3}
+  LoadGigaSFX: {fileID: 8300000, guid: 4e84740aaa899f3499ca869ba05e3abc, type: 3}
   BounceSFX:
   - {fileID: 8300000, guid: 74d02d4752010044ca9b8754895e8874, type: 3}
   - {fileID: 8300000, guid: a4a5081992aa8f44caa130f42bf840a5, type: 3}
