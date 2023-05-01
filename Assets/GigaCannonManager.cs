@@ -46,7 +46,7 @@ public class GigaCannonManager : MonoBehaviour
         firePrompt.SetActive(false);
         fireParticles.Play(true);
         ready = false;
-        _impulseSource.GenerateImpulse(2f);
+        _impulseSource.GenerateImpulse(4f);
         StartCoroutine(WaitThenGoToMainMenu());
     }
     

@@ -20,9 +20,11 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera cmCam;
 
+    private CinemachineImpulseSource _recoilImpulse;
 
     void Start()
     {
+        _recoilImpulse = gameObject.GetComponent<CinemachineImpulseSource>();
         // cmCam = gameObject.GetComponentInChildren<CinemachineVirtualCamera>();
     }
 
@@ -72,6 +74,8 @@ public class CannonController : MonoBehaviour
         
         cannonSo.SetPower(0.75f);
         UnloadProjectile();
+        
+        _recoilImpulse.GenerateImpulse(4f);
     }
 
     public bool GetIsLoaded()
