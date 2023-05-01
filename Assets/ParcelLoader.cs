@@ -21,7 +21,6 @@ public class ParcelLoader : MonoBehaviour
     private void CartAndCannonTouchLoader()
     {
         Vector2 pos = new Vector2(transform.position.x, transform.position.y);
-        
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(pos, 0.5f);
 
         GameObject BarrelObj = null;

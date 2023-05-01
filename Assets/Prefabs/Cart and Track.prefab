@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4035288288607250898}
   - component: {fileID: 4035288288607250925}
   - component: {fileID: 4035288288607250927}
+  - component: {fileID: 2764845882032291150}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Untagged
@@ -118,6 +119,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -1, y: 0.125}
       - {x: 1, y: 0.125}
+--- !u!114 &2764845882032291150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035288288607250897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4656d9d464e9fd1ebb0e78456ea4d5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4035288288760953698
 GameObject:
   m_ObjectHideFlags: 0

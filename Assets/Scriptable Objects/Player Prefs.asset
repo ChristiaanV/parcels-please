@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d8bea13666f01f7b210261309357b7, type: 3}
   m_Name: Player Prefs
   m_EditorClassIdentifier: 
-  mouseSensitivity: 0
-  musicVolume: 0
-  sfxVolume: 0
+  mouseSensitivity: 1.01
+  musicVolume: 0.5
+  sfxVolume: 0.5
