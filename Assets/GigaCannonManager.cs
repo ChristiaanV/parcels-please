@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GigaCannonManager : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class GigaCannonManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera gigaCam;
     [SerializeField] private ParticleSystem fireParticles;
 
+
+    private CinemachineImpulseSource _impulseSource;
     private bool ready = false;
     
     void Start()
     {
-        
+        _impulseSource = gameObject.GetComponent<CinemachineImpulseSource>();
     }
 
 
@@ -21,9 +24,7 @@ public class GigaCannonManager : MonoBehaviour
     {
         if (ready && Input.GetKeyDown(KeyCode.F))
         {
-            firePrompt.SetActive(false);
-            fireParticles.Play(true);
-            ready = false;
+            FireGigaCannon();
         }
     }
     
@@ -42,6 +43,18 @@ public class GigaCannonManager : MonoBehaviour
 
     private void FireGigaCannon()
     {
-        
+        firePrompt.SetActive(false);
+        fireParticles.Play(true);
+        ready = false;
+        _impulseSource.GenerateImpulse(2f);
+        StartCoroutine(WaitThenGoToMainMenu());
+    }
+    
+    
+    IEnumerator WaitThenGoToMainMenu()
+    {
+        yield return new WaitForSeconds(6);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Main Menu");
     }
 }
