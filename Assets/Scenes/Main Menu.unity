@@ -334,6 +334,7 @@ MonoBehaviour:
   EffectsSource: {fileID: 1582704529}
   MusicSource: {fileID: 1587695067}
   SingleSource: {fileID: 1637193586}
+  MainMusic: {fileID: 0}
   FireSFX: {fileID: 8300000, guid: 51c08594f18d6e44f998ead5832680b7, type: 3}
   LoadSFX: {fileID: 8300000, guid: 1a1f998751d1f054c93bf6bb0a396c74, type: 3}
   FireGigaSFX: {fileID: 8300000, guid: 3b299e832eb65d64ea8aadfb7b0f7eba, type: 3}

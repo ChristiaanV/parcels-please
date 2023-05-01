@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
     {
         float _mouseX = Input.GetAxis("Mouse X");
         float _mouseY = Input.GetAxis("Mouse ScrollWheel");
-        cannonSo.MouseInput(new Vector2(_mouseX, _mouseY));
+        cannonSo.MouseInput(new Vector2(_mouseX/5f, _mouseY/5f));
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour
     private void CartInput()
     {
         float _mouseX = Input.GetAxis("Mouse X");
-        cartSo.MouseInput(_mouseX);
+        cartSo.MouseInput(_mouseX/5f);
     }
     
 }
